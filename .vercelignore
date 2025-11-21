@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Testing
+coverage
+.nyc_output
+*.log
+
+# Development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+.next
+.turbo
+dist
+build
+lib
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Documentation
+docs
+*.md
+!README.md
+
+# Python specific
+.pytest_cache
+.mypy_cache
+.ruff_cache
+*.egg-info
