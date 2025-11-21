@@ -238,3 +238,6 @@ node_modules/
 # Local SQLite database files
 *.sqlite3
 *.db
+
+# MCP Server Configuration (contains secrets)
+.mcp.json
