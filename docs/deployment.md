@@ -1,13 +1,21 @@
 # Deployment Guide
 
+## Vercel Monorepo Setup
+
+This project uses a **pnpm workspace monorepo** structure. The `vercel.json` configuration at the root is optimized for deploying both the Next.js frontend and Python API together:
+
+- **No framework auto-detection**: We use custom build commands instead of relying on Vercel's framework detection
+- **Workspace filtering**: Uses `pnpm --filter=web` to build only the web app
+- **Automatic API routing**: Python functions in `/api` directory are automatically deployed as serverless functions
+
 ## Vercel Configuration
 
 ### Main App Deployment
 
-- **Build Command**: `pnpm --filter=web build` (configured in vercel.json)
+- **Build Command**: `pnpm install && pnpm --filter=web build` (configured in vercel.json)
 - **Output Directory**: `apps/web/.next`
-- **Framework**: Next.js (auto-detected)
 - **Install Command**: `pnpm install`
+- **Framework**: Next.js (detected from monorepo structure)
 
 ### Python API Deployment
 
