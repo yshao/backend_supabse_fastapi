@@ -3,10 +3,5 @@
   "outputDirectory": "apps/web/.next",
   "devCommand": "pnpm --filter=web dev",
   "installCommand": "pnpm install",
-  "framework": "nextjs",
-  "functions": {
-    "api/graphql/**": {
-      "runtime": "python3.9"
-    }
-  }
+  "framework": "nextjs"
 }
